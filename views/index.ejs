@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Tabel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Tabel</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(item) { %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.nama %></td>
+                        <td><%= item.email %></td>
+                        <td><%= item.alamat %></td>
+                        <td>
+                            <a href="/edit/<%= item.id %>" class="btn btn-primary">Edit</a>
+                            <a href="/hapus/<%= item.id %>" class="btn btn-danger">Hapus</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+            <a href="/add">Tambah Data</a>
+        </table>
+    </div>
+</body>
+</html>

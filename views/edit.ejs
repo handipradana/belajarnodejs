@@ -1,0 +1,18 @@
+<!-- ... Bagian lain dari halaman ... -->
+
+<h2>Edit Data</h2>
+<form action="/update/<%= data.id %>" method="post">
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" name="nama" value="<%= data.nama %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="<%= data.email %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="alamat" class="form-label">Alamat</label>
+        <input type="text" class="form-control" id="alamat" name="alamat" value="<%= data.alamat %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
