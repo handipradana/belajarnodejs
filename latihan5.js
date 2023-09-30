@@ -10,10 +10,10 @@ app.set('views', __dirname + '/views')
 
 //membuat koneksi mysql
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'basiccrud'
+    host: 'nodejsdb.cedtmqjtsu4x.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: '12345678',
+    database: 'nodejsdb'
 })
 
 db.connect((err) => {
