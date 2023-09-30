@@ -20,6 +20,18 @@ db.connect((err) => {
     console.log('MySQL terkoneksi')
 })
 
+// Contoh mendapatkan data dari database
+db.query('SELECT * FROM tbl_data', (err, rows) => {
+    if (err) {
+      // Handle kesalahan
+      console.log(err);
+    } else {
+      res.render('index', { data: rows }); // Kirim data ke template
+      console.log(rows)
+    }
+  });
+  
+
 app.get('/', (req, res) => {
     db.query('SELECT * FROM tbl_data', (err, result) => {
         // res.send(result)
